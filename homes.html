@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+   <!-- Prototipo tela inicial -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Vocacional - ITEMM</title>
+    <link rel="shortcut icon" href="https://s3-alpha-sig.figma.com/img/2c33/a0f2/eb5f4a0a251eeccadb49f43de864a97c?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c7CI3r6lN0eelfUdhQqOCPyOAAY6YIHIUDXc~16dZGkUnaHR1B3vgUNx3IRNaO-cgfHz0qgUQD5HIfIYRDSJOjjXLz1HG5q8dg19cwav1Zu1CYtPPsp5-icit4XZrfjOpAdCTndxzBfMvv0zLAbWC2nxvEztx-kpfuGxlSpzb1ZBJTToanheaSAHuxoNyMyMMd6XZc8Pkn7WJrxSmIkTE6CEmrZk8~LJIpjuqO-lNcr7TYIBo5vo-S9BVOMY3tthB28auz0jMAvpi9aZllj0Ecq288ek6n2KGMQgpsSdlSW1tw1XPjldOluAIkwykRzMqpPEHJ6nIiZAZ1BAhUKK6g__" type="image/x-icon" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+  />
+
+
+
+
+   <!-- JavaScript Bootstrap -->
+   <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"
+   ></script>
+   <style>
+  .image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .overlay-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Cor de fundo com opacidade */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .overlay-text button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    cursor: pointer;
+  }
+
+  .overlay-text p {
+    margin-top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .show {
+    display: block !important;
+  }
+
+  </style>
+  <style>
+  body {
+  font-size: 14px;
+  
+}
+
+@media screen and (min-width: 960px) {
+       .titleteste{
+        margin-left: -80px;
+
+       }
+        }
+        
+@media screen and (min-width: 1040px) {
+       .titleteste{
+        margin-left: -80px;
+
+       }
+       .apresentacao{
+        font-size: 14px; margin-right: 30px; text-align: justify;margin-top: 10px; color: rgba(146, 191, 175, 1);margin-top: 16px;margin-left:-35px;
+       }
+        }
+      
+@media screen and (min-width: 1280px) {
+            .imgfluid{
+                height: 40%;/* Mantenha o mesmo padding para dispositivos maiores */
+            }
+        }
+
+
+  </style>
+</head>
+<body style="background-color: rgba(121, 217, 252, 0.14); padding: 1px; ">
+    <div class="container" id="featured-container" >
+        <div class="row padding-left: 60px;" > 
+          <div class="col-3 pt-5 "  >
+            
+            <img style="margin-left:-6px;" decoding="async" width="150" height="102" src="{{ url_for('static', filename='Logotipo.png') }}"  class="attachment-large size-large wp-image-981" alt="">								</a>
+            <h1 class="titleteste" style="margin-top: 22px; color: rgba(146, 191, 175, 1); font-family: Arial, Helvetica, sans-serif; font-size: 36px; margin-left:-60px;"><strong>TESTE VOCACIONAL</strong></h1>
+            <div class="apresentacao">
+              <p style="font-size: 14px; margin-right: 30px; text-align: justify;margin-top: 10px; color: rgba(146, 191, 175, 1);margin-top: 16px;margin-left:-35px; " >A escolha profissional é uma decisão que percorre nossas vidas desde a infância, onde a missão em descobri-la causa um misto de sentimentos e dúvidas do: “E agora?”. 
+
+                Com objetivo de auxiliar na busca desta missão, o Teste Vocacional do ITEMM irá trabalhar com sete habilidades intelectuais, baseado na teórica das inteligências múltiplas, onde irá contribuir com seu autoconhecimento e descoberta de seus maiores potenciais.</p>
+              <button style="border-radius: 15px; margin-left:-35px;"  type="button" class="btn btn-success" onclick="window.location.href = 'perguntas';">Teste Vocacional</button>
+              <p style="margin-top: 12px;font-size: 12px; margin-right: 30px; font-size: 14px; text-align: justify; color: rgba(146, 191, 175, 1); margin-left:-35px;">Agora tem mais chances de definir o curso que combina com seu jeito!</p>
+              <p style="font-size: 10px; margin-right: 30px; text-align: justify; color: rgba(146, 191, 175, 1); margin-left:-35px;">Teste de Inteligências Múltiplas de Howard Gardner</p>
+              
+            </div>
+          </div> 
+          <div class="col-4 "  style="background-color: white; padding: 40px; padding-left: 50px;">
+            <h6 style="font-family: Georgia, serif;"><strong> TESTE DE INTELIGÊNCIAS MÚLTIPLAS DE HOWARD GARDNER </strong></h6>
+          <p  style="color:rgba(102, 101, 101, 1); font-size: 14px; border-left: 3px solid rgba(192, 192, 192, 1); padding-left: 10px; margin-top: 15px;"> 
+    
+            O Teste foi elaborado de acordo com os estudos do psicólogo educacional Howard Gardner, a partir da Teoria das Inteligências Múltiplas, onde busca identificar o seu perfil e te levar a refletir sobre os possíveis carreiras mais compatíveis com você, expandindo sua visão de futuro e possibilidades. 
+            
+            As formas de inteligências estudadas por Gardner são: Interpessoal; Lógico-Matemática; Intrapessoal; Linguística; Espacial; Musical e Corporal – Cinestésica. 
+            <br>
+            <br>
+            <strong style="font-size: 12px;">TESTE DE INTELIGÊNCIAS MÚLTIPLAS DE HOWARD GARDNER</strong>
+           </p>
+
+            
+
+            <p style="margin-top: 50px;"><strong>FUNCIONAMENTO</strong></p>
+         <div>   <p style="color:rgba(102, 101, 101, 1); font-family: Arial, Helvetica, sans-serif;" >
+
+          O teste obtém 35 perguntas baseados nas sete inteligências múltiplas de Gardner, onde você irá selecionar as opções de 0 (você menos se identifica) à 06 (se identifica completamente).  
+          
+          Ao finalizar, o teste proporcionará insights que irá auxiliar na busca de possíveis áreas profissionais que mais se identifiquem com seu perfil, além de explicar um pouquinho mais sobre a inteligência que mais se destaca em sua personalidade, baseado em suas respostas anteriormente. Por este motivo, é importante que você responda com atenção cada pergunta!</p></div>
+
+              <div>
+                <p  style="margin-top:30px; font-size:16px ; margin-bottom: -40px;"><strong>PERFIL</strong></p>
+              </div>
+        </div>
+       
+        <div class="col-5 pt-4"  style="background-color: white; padding: 40px;">
+          <img style=" margin-left: -300px;" decoding="async" width="250%" height="62% margin-top:-50px" src="{{ url_for('static', filename='circulo.png') }}"  class="attachment-large size-large wp-image-981" alt="">								</a>
+        </div>
+      
+        <div class="col-3 " >
+        
+        </div>
+        <div  class="col-9" id="featured-images"  style="background-color: white; padding: 40px; ">
+          <div class="row g-4">
+
+            <div  class="col-8 col-md-2 image-container px-2" onclick="toggleText('overlay1')"  style="background-color:#FDF5E6; border-radius: 30px; margin-left: 60px;">
+              <button style="border-radius: 100px; margin-left: 110px;" onclick="toggleText('overlay2')">?</button>
+              <img style="margin-left:20px; " decoding="async" style="border-radius: 10px;" width="70" height="70" src="{{ url_for('static', filename='cinestesica.png') }}" class="attachment-large size-large wp-image-981 img-fluid" alt="">
+              <div class="overlay-text" id="overlay1">
+                <strong>está presente em pessoas que possuem equilíbrio, velocidade, flexibilidade e expressão corporal</strong>
+                <button onclick="toggleText('overlay1')"></button>
+              </div>
+              
+              
+              <p style=" margin-left: 22px; margin-top: 10px;">Físico-Cinestésica</p>
+             
+            
+            </div>
+      
+     
+            <div class="col-8 col-md-2   image-container" onclick="toggleText2('overlay3')" style="background-color:#FDF5E6; border-radius: 30px; margin-left: 50px;">
+              <button style="border-radius: 100px; margin-left: 105px; " onclick="toggleText2('overlay4')">?</button>
+                  <img  style="margin-left:20px;margin-top: 7px;" decoding="async" style="border-radius: 10px;"  width="70" height="70" src="{{ url_for('static', filename='espacial.png') }}" class="attachment-large size-large wp-image-982" alt="">								</a>
+                  <div class="overlay-text" id="overlay3">
+                    <strong>está relacionada a pessoas com uma boa percepção visual e espacial</strong>
+                    <button onclick="toggleText2('overlay3')"></button>
+                  </div>
+ 
+                  <p style=" margin-left: 25px; margin-top: 30px;">Espacial</p>
+                
+                </div>
+
+            <div class="col-8 col-md-2 image-container" onclick="toggleText2('overlay5')" style="background-color:#FDF5E6; border-radius: 30px; margin-left: 50px;">
+              <button style="border-radius: 100px; margin-left: 105px; " onclick="toggleText2('overlay4')">?</button>
+                  <img style="margin-left:20px;margin-top: 10px;" decoding="async" style="border-radius: 10px; "  width="70" height="70" src="{{ url_for('static', filename='interpessoal.png') }}" class="attachment-large size-large wp-image-980" alt="">								</a>
+                  <div class="overlay-text" id="overlay5">
+                    <strong>está relacionada ao domínio da comunicação e persuasão</strong>
+                    <button  onclick="toggleText2('overlay5')"></button>
+                  </div>
+              
+                <p style="margin-top: 30px; margin-left: 17px;">Interpessoal</p>
+              </div>
+        
+            <div class="col-8 col-md-2  image-container" onclick="toggleText2('overlay7')" style="background-color:#FDF5E6; border-radius: 30px; margin-left: 50px;">
+              <button style="border-radius: 100px; margin-left: 105px; " onclick="toggleText2('overlay4')">?</button>
+              <img style="margin-left:16px; margin-top: 10px;" decoding="async" style="border-radius: 10px;"  width="70" height="70" src="{{ url_for('static', filename='intrapessoal.png') }}" class="attachment-large size-large wp-image-980" alt="">								</a>
+              <div class="overlay-text" id="overlay7">
+                <strong>está relacionada a pessoa que possui o autoconhecimento, ou seja, a conexão consigo mesmo</strong>
+                    <button onclick="toggleText2('overlay7')"></button>
+                  </div>
+                
+            <p  style=" margin-left: 17px; margin-top: 30px;" >Intrapessoal</p>
+          </div>
+       
+          <div class="col-8 col-md-1 image-container" onclick="toggleText2('overlay9')" style="margin-left: 30px;">
+          </div>
+
+        <div class="col-8 col-md-2 image-container" onclick="toggleText2('overlay9')" style="background-color:#FDF5E6; border-radius: 30px; margin-left: 50px;" >
+          <button style="border-radius: 100px; margin-left: 105px; " onclick="toggleText2('overlay4')">?</button>
+          <img  style="margin-left:20px;margin-top: 20px;" decoding="async" style="border-radius: 10px;"  width="70" height="70" src="{{ url_for('static', filename='linguistica.png') }}" class="attachment-large size-large wp-image-980" alt="">								</a>
+          <div class="overlay-text" id="overlay9">
+            <strong>está relacionada a pessoa que consegue se comunicar, aprender novas línguas e fazer uso da linguagem verbal e escrita</strong>
+            <button onclick="toggleText2('overlay9')"></button>
+          </div>
+    
+        <p style="margin-top: 20px; margin-left: 22px;" >Linguística</p>
+      </div>
+   
+    <div class="col-8 col-md-2 image-container" onclick="toggleText2('overlay11')" style="background-color:#FDF5E6; border-radius: 30px; margin-left: 60px;">
+      <button style="border-radius: 100px; margin-left: 105px; " onclick="toggleText2('overlay4')">?</button>    
+      <img style="margin-left:20px;margin-top: 10px;" decoding="async" style="border-radius: 10px;"  width="70" height="70" src="{{ url_for('static', filename='matematico.png') }}" class="attachment-large size-large wp-image-980" alt="">								</a>
+      <div class="overlay-text" id="overlay11">
+        <strong>está ligada a capacidade que o ser humano tem para raciocínios dedutivos e conceitos matemáticos</strong>
+        <button onclick="toggleText2('overlay11')"></button>
+      </div>
+     
+    <p style="margin-top: 15px; margin-left: 15px;">Lógico-Matemática</p>
+  </div>
+
+<div class="col-8 col-md-2 image-container" onclick="toggleText2('overlay13')" style="background-color:#FDF5E6; border-radius: 30px; margin-left: 60px;">
+  <button style="border-radius: 100px; margin-left: 105px; " onclick="toggleText2('overlay4')">?</button>             
+  <img style="margin-left:20px;margin-top: 20px;" decoding="async" style="border-radius: 10px;"  width="70" height="70" src="{{ url_for('static', filename='musical.png') }}" class="attachment-large size-large wp-image-980" alt="">								</a>
+  <div class="overlay-text" id="overlay13">
+    <strong>demonstra grande habilidade de reconhecer, aprender, interpretar e diferenciar notas, timbres, melodias e ritmos</strong>
+    <button onclick="toggleText2('overlay13')"></button>
+  </div>
+
+<p style="margin-top: 20px; margin-left: 32px;" >Musical</p>
+</div>
+<div class="col-8 col-md-1 image-container" onclick="toggleText2('overlay9')">
+</div>
+
+</div>
+<div class="pt-3">
+<p style="margin-top: 30px; margin-top:30px; font-size:16px ;" > <strong>EMBASAMENTO HISTÓRICO</strong></p>
+  <p style="color:rgba(102, 101, 101, 1); ">As inteligências múltiplas é uma teoria desenvolvida a partir dos anos 80 proposta pelo cientista formado em neurologia e psicologia educacional Howard Gardner, cujo objetivo era analisar e entender como funciona a inteligência humana. Segundo Gardner, cada pessoa demonstra habilidades cognitivas distintas e únicas. Ou seja, cada indivíduo tem um domínio maior em determinadas áreas do que outras.</p>
+  <p style="margin-top: 30px; margin-top:30px; font-size:16px ;"><strong>O QUE É INTELIGÊNCIA MÚLTIPLA?
+  </strong></p>
+     <p style="color:rgba(102, 101, 101, 1); ">
+    A teoria das inteligências múltiplas tem como objetivo defender que existem diferentes formas de inteligência e aprendizado. Ou seja, não existe uma pessoa mais inteligente que a outra, apenas habilidades distintas em cada área, conhecer qual inteligência o indivíduo dispõe maior habilidade possibilita promover uma educação mais personalizada e um entendimento mais completo do potencial humano, tanto na área educacional quanto na profissional. </p>
+    <p style="font-size:16px ;"><strong>DICAS PARA O TESTE VOCACIONAL </strong></p>
+    <p style="color:rgba(102, 101, 101, 1); ">Com objetivo de orientarmos você de forma eficaz na busca de possíveis áreas correlacionadas ao seu perfil, é importante você seguir estas dicas:  
+      Encontre um local silencioso. 
+      Responda as perguntas com atenção e máxima sinceridade. 
+      Após a finalização do teste, anote as inteligências que mais são compatíveis com você. 
+      Pesquise os cursos correlacionados nas inteligências compatíveis. 
+       
+      Boa sorte na busca de possibilidades ou reforço do desejo de possíveis campos </p>
+        </div >
+        <button style="margin-bottom: 10px;border-radius: 15px; margin-top: 50px; margin-left:280px"  type="button" class="btn btn-success" onclick="window.location.href = 'perguntas';"> Fazer Teste Vocacional</button>
+      </div>
+    </div>
+      
+  </div>
+
+          </div>
+          
+        </div>
+    
+      </div>
+      <script>
+        function toggleText(id) {
+    var overlayText = document.getElementById(id);
+    overlayText.classList.toggle('show');
+
+    
+  }
+  function toggleText2(id) {
+    var overlayText = document.getElementById(id);
+    overlayText.classList.toggle('show');
+
+    
+  }
+      </script>
+      
+
+</body>
+</html>

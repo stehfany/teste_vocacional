@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="https://s3-alpha-sig.figma.com/img/2c33/a0f2/eb5f4a0a251eeccadb49f43de864a97c?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c7CI3r6lN0eelfUdhQqOCPyOAAY6YIHIUDXc~16dZGkUnaHR1B3vgUNx3IRNaO-cgfHz0qgUQD5HIfIYRDSJOjjXLz1HG5q8dg19cwav1Zu1CYtPPsp5-icit4XZrfjOpAdCTndxzBfMvv0zLAbWC2nxvEztx-kpfuGxlSpzb1ZBJTToanheaSAHuxoNyMyMMd6XZc8Pkn7WJrxSmIkTE6CEmrZk8~LJIpjuqO-lNcr7TYIBo5vo-S9BVOMY3tthB28auz0jMAvpi9aZllj0Ecq288ek6n2KGMQgpsSdlSW1tw1XPjldOluAIkwykRzMqpPEHJ6nIiZAZ1BAhUKK6g__" type="image/x-icon" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+  />
+
+
+   <!-- JavaScript Bootstrap -->
+   <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"
+
+     
+   ></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <style>
+    .rounded-input {
+        border-radius: 5px; /* Define o raio de arredondamento das bordas */
+        border: 1px solid #ccc; /* Adiciona uma borda para melhorar a aparência */
+        padding: 5px; /* Adiciona um espaçamento interno ao redor do texto */
+    }
+</style>
+</head>
+<body>
+  <div class="container pt-5">
+    <div class="row">
+        <div class=" col-5 pt-3 pb-5">
+            <div class="  pb-5" style="background-image: url('https://s3-alpha-sig.figma.com/img/fd90/368f/1fec467f869fe1ee0edf5cd598d17198?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NWf52B6JH1uer6sigwyEE~bZEW4gAjaL~yS6XYWMFK~P~Z~NDaN-wHk160DEtNkB8N9NTm4XTlN~khovSNTRXvoIiJBhHQP5vmbCGXkw9LQA7YyAO~vzRhuBHwDb9KZbHgK4GpjKwVef3t-i4t~P0AuQC7VkTFDtT~c5V08hHxdp3uVUFyZIQO1oAUIV9y~cSItBuD0VAX2rXVrYzAOnOxanIWKyz-zVQCdcKhCurgM7xrlKb62UjREYIYQDowcXaSDyY8-Y2dQX8Bs1VQOG~hquPppUeq-B35kDya7jBlzWlz6AJrBmcrihWd2NEcxcN38t5jeFvFzMmD63QZZNZA__'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white;">
+                <button style="margin-left: 10px; margin-top: 5px;" type="button" class="btn btn-light" onclick="window.location.href='/';">Home</button>
+                <div class="col-3">
+                    <h1 style="margin-left: 15px;" >Vagas!</h1>
+                <p style="margin-left: 15px;">Confira nossas vagas!<br>
+Clicando no botão abaixo, você terá acesso a oportunidades em diversas cidades do Brasil para jovens aprendizes e estagiários</p>
+                    <button style="margin-left: 15px;" type="button" class="btn btn-success" onclick="window.location.href='https://itemm.com.br/vagas/'">Vagas</button>
+
+                </div>
+                </div>
+                </div>
+
+                <div class="col-6"   >
+                    <div class="pt-5 pb-5" style="background-color: white;">
+                        <div style="margin-left: 110px;">
+                         <div style="margin-bottom:15px;">      <label> Email:</label>
+                             <input style="margin-left: 5px;"  type="text" placeholder="Seu email" name="email" id="email" class="rounded-input">
+                         </div>
+                         
+                        <div> <label>Senha:</label>
+                         <input   type="password" placeholder="Exemplo@04" name="senha" id="senha" class="rounded-input">
+             
+                    <div>
+                     <a  style="font-size: 12px; margin-left: 135px ;" href="/reset">Esqueci minha senha</a>
+                 </div>
+                 <div class="pt-3">  <button  style="margin-left: 175px;" type="button" class="btn btn-secondary" onclick="verificarSenha()">entrar</button>
+              </div>
+              
+                  <div class="pt-5 pb-5" style="margin-left: 45px;">
+                     
+                  <p style="font-size: 12px;">Ainda não tem cadastro? <a href="#" id="link_cadastro">Cadastre-se</a></p>
+                    </div>
+                      </div>
+                     </div>
+            </div>
+        </div>
+     
+            <div class="col-1">
+                <img style="margin-left: -15px;" decoding="async" width="100" height="100" src="{{ url_for('static', filename='Logotipo.png') }}"  class="attachment-large size-large wp-image-981" alt="">								</a>
+           </div>
+        
+        
+            <script>
+
+
+                $(document).ready(function() {
+                    // Manipulador de evento para o link "Cadastre-se"
+                    $('#link_cadastro').on('click', function(event) {
+                        event.preventDefault(); // Evita que o link seja seguido imediatamente
+                        // Redireciona para a página de cadastro
+                        var aptidoes = JSON.parse(getParameterByName('aptidoes'));
+                        window.location.href = "/cadastro?soma=" + "&aptidoes=" + JSON.stringify(aptidoes)
+                    });
+                });
+        
+                function verificarSenha() {
+    var senha = $('#senha').val();
+    var email = $('#email').val();
+    var aptidoes = JSON.parse(getParameterByName('aptidoes'));
+
+    // Enviar solicitação POST para o servidor
+    $.post('/verificar_senha', { senha: senha, email: email })
+        .done(function(data) {
+            if (data === "Senha correta. Acesso concedido.") {
+                // Criar um cookie de sessão com o email do usuário
+                document.cookie = "loggedIn=true; email=" + email + "; path=/";
+                console.log("Cookie de sessão criado com sucesso." + email);
+
+                // Aguardar 5 segundos antes de redirecionar
+                setTimeout(function() {
+                    // Redirecionar para a página de resultados com o email como parâmetro na URL
+                    window.location.href = "/resultados?soma=&aptidoes=" + JSON.stringify(aptidoes) + "&email=" + email;
+                }, 100); // 5000 milissegundos = 5 segundos
+            } else {
+                // Exibir a mensagem de erro
+                alert(data);
+            }
+        })
+        .fail(function(xhr, status, error) {
+            // Exibir mensagem de erro se a requisição falhar
+            alert("Erro ao verificar a senha: " + error);
+        });
+}
+
+
+        
+                function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+            </script>
+         </div>
+        
+        </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
